@@ -582,6 +582,11 @@ button {
 	letter-spacing: .12em;
 	padding: 1em 1.5em;
 }
+.navbar-nav .btn,
+.navbar-nav button {
+	padding: 8.5px 20px;
+	font-size: 12px;
+}
 
 .btn img,
 button img {
