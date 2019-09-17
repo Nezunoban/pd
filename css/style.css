@@ -1977,3 +1977,9 @@ section.stayInTouch {
     font-size: larger;
 }
 
+@media all and (min-width: 980px){
+	.p-custom-lg {
+		padding: 50px 80px;
+	}
+}
+
