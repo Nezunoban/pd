@@ -73,7 +73,12 @@
                   <p>The data you need – just an API call away.</p>
 
 
-                  <a class="mb-3" href="request-sample/"><button class="mt-3">Sample Data Set</button></a>
+                  <!-- Button trigger modal -->
+                  <button type="button" class="btn btn-primary mt-lg-3 mb-3 mb-lg-0" data-toggle="modal" data-target="#sampleModal">
+                     Sample Data Set
+                  </button>
+
+                  <!--<a class="mb-3" href="request-sample/"><button class="mt-3">Sample Data Set</button></a>-->
                </div>
                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-8 text-sm-center text-lg-left">
                   <div class="video">
@@ -158,8 +163,89 @@
          </div>
       </div>
    </footer>
+   <!-- Modal -->
+   <div class="modal fade" id="sampleModal" tabindex="-1" role="dialog" aria-labelledby="SampleModalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content modal-form">
+         <div class="modal-header">
+            <div>
+                  <h5 class="modal-title" id="exampleModalLongTitle">Request a Sample</h5>
+                  <!--<p class="text-leftmb-5">Get a sample data set.</p>-->
+            </div>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+         </div>
+         <div class="modal-body">
+            <form action="https://formspree.io/info@paralleldomain.com" method="POST" />
+
+               <div class="row">
+                  <div class="col-sm-6">
+                     <div class="inputBox ">
+                        <div class="inputText">First Name</div>
+                        <input type="text" name="first" class="input" required="true">
+                     </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                     <div class="inputBox">
+                        <div class="inputText">Last Name</div>
+                        <input type="text" name="last" class="input" required="true">
+                     </div>
+                  </div>
+               </div>
+
+               <div class="row">
+                  <div class="col-sm-6">
+                     <div class="inputBox">
+                        <div class="inputText">Email</div>
+                        <input type="email" name="email" class="input" required="true">
+                     </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                     <div class="inputBox">
+                        <div class="inputText">Company</div>
+                        <input type="text" name="company" class="input" required="true">
+                     </div>
+                  </div>
+               </div>
+               <!--
+               <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="terms1" required>
+                  <label class="form-check-label" for="terms1">I agree to the Parallel Domain <a href="../terms-conditions" target="_blank">Sample Data Set Terms and Conditions</a></label>
+               </div>
+               -->
+               <div class="row mt-4">
+                  <div class="col-sm-12">
+                     <input type="submit" name="" class="button" value="Request Sample Data Set">
+                  </div>
+               </div>
+            </form>
+         </div>
+         <!--<div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+         -->
+         </div>
+      </div>
+      </div>
+   </div>
 </div>
 <!-- Start of HubSpot Embed Code -->
 <script type="text/javascript" id="hs-script-loader" async defer src="https://js.hs-scripts.com/5109583.js"></script>
+<script>
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
+
+/* label positioning focus */
+
+$(".input").focus(function() {
+   $(this).parent().addClass("focus");
+})
+
+
+</script>
 <!-- End of HubSpot Embed Code -->
 </body>
