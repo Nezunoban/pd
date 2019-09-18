@@ -1937,13 +1937,15 @@ section.stayInTouch {
 	.navbar-expand-lg {
 		padding-right: 16px;
 	}
+
 	.navbar-expand-lg .navbar-nav .nav-link {
-		padding-right: 2em;
-		padding-left: 2em;
+		padding-right: 1.5em;
+		padding-left: 1.5em;
 		line-height: 40px;
 		border-bottom: 6px solid transparent;
 		border-top: 10px solid transparent;
 		padding-top: 14px;
+		font-size: 13px;
 	}
 
 	.navbar-light .navbar-nav .nav-link:focus, 
@@ -1977,6 +1979,17 @@ section.stayInTouch {
 	}
 }
 
+@media all and (min-width: 1100px) {
+	.navbar-expand-lg .navbar-nav .nav-link {
+		padding-right: 2em;
+		padding-left: 2em;
+		line-height: 40px;
+		border-bottom: 6px solid transparent;
+		border-top: 10px solid transparent;
+		padding-top: 14px;
+	}
+}
+
 .dropdown-menu {
     color: #fff;
     border: 0;
@@ -1995,19 +2008,56 @@ section.stayInTouch {
 	color: #3dc0ef;
 }
 
-
-.hero p {
-    font-size: larger;
+.hero h1 {
+	font-size: 20px;
+}
+.hero .btn,
+.hero button {
+	font-size: 14px;
+}
+@media all and (min-width: 1300px) {
+	.hero .btn,
+	.hero button {
+		font-size: 18px;
+	}
+	
+	.hero p {
+		font-size: larger;
+	}
+}
+@media all and (min-width: 980px) {
+	.hero h1 {
+		font-size: 24px;
+	}
+}
+@media all and (min-width: 1300px) {
+	.hero h1 {
+		font-size: 24px;
+	}
+}
+@media all and (min-width: 1500px) {
+	.hero h1 {
+		font-size: 35px;
+	}
 }
 
+
 @media all and (min-width: 980px){
-	.p-custom-lg {
-		padding: 50px 80px;
-	}
 	.modal-header .close {
 		font-size: 2em;
 		line-height: .5em;
 
+	}
+}
+@media (min-width: 980px) {
+	.p-custom-lg {
+		padding: 1px 40px;
+	}
+}
+
+@media all and (min-width: 1200px){
+	.p-custom-lg {
+		padding: 50px 80px;
 	}
 }
 
